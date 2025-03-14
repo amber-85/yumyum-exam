@@ -46,6 +46,7 @@
             padding:2rem 4.9rem;
             text-align: center;
             border-radius: 0 0 .2rem .2rem;
+            margin-bottom: 1rem;
             &:hover{
                 @include typography(2rem, 600, $secondry-color);
                 background-color: $white-color;

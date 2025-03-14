@@ -73,31 +73,60 @@
     &__ingredients{
         @include typography(.8rem, 400, $font-gray);
     }
+
     &__dip{
+        width: 90%;
+        @include margin-auto;
+
+        &__group{
         @include typography(1.2rem,600,$font-gray);
         @include flex (row,space-between,center);
+        }
     }
     &__dip__frame{ 
         width: 90%;
         @include grid(repeat(3, 1fr),repeat(2,auto),0.2rem,center,center);
+        @include margin-auto;
         &__btn{
             width: 100%;
+            &:hover{
+                cursor:pointer;
+                background-color: $secondry-color;
+                color: $green-color;
+                font-weight: 600;
+            }
             @include btn-style(  
             .3rem,
             .1rem,
             400,
             10px,
-            )
+            );
         }
     }
 
     &__drink{
-        @include typography(1.2rem,600,$font-gray);
-        @include flex (row,space-between,center);
+        width: 90%;
+        @include margin-auto;
+
+        &__group{
+            @include typography(1.2rem,600,$font-gray);
+            @include flex (row,space-between,center);
+            };
+
+    
         &__frame{
             @include grid(repeat(3, 1fr),repeat(2,auto),0.2rem,center,center);
+            @include margin-auto;
+            margin-bottom: 1rem;
             &__btn{
                 width: 100%;
+               
+                &:hover{
+                    cursor:pointer;
+                    background-color: $secondry-color;
+                    color: $green-color;
+                    font-weight: 600;
+                }
                 @include btn-style(  
                 .3rem,
                 .1rem,

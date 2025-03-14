@@ -50,13 +50,13 @@ const MenuList: React.FC = () => {
             </article>
           );
         })}
-        <article className="menu__list__item">
-          <section className="menu__list__item__dip">
-            <p className="menu__list__item__dip--title">Dipsås</p>
-            <section className="menu__list__item__dip--dotted">
+        <article className="menu__list__item__dip">
+          <section className="menu__list__item__dip__group">
+            <p className="menu__list__item__dip__group--title">Dipsås</p>
+            <section className="menu__list__item__dip__group--dotted">
               .....................
             </section>
-            <p className="menu__list__item__dip--price">19kr</p>
+            <p className="menu__list__item__dip__group--price">19kr</p>
           </section>
 
           <section className="menu__list__item__dip__frame">
@@ -71,13 +71,13 @@ const MenuList: React.FC = () => {
           </section>
         </article>
 
-        <article className="menu__list__item">
-          <section className="menu__list__item__drink">
-            <p className="menu__list__item__drink--title">Dryck</p>
-            <section className="menu__list__item__drink--dotted">
+        <article className="menu__list__item__drink">
+          <section className="menu__list__item__drink__group">
+            <p className="menu__list__item__drink__group--title">Dryck</p>
+            <section className="menu__list__item__drink__group--dotted">
               .....................
             </section>
-            <p className="menu__list__item__drink--price">19kr</p>
+            <p className="menu__list__item__drink__group--price">19kr</p>
           </section>
           <section className="menu__list__item__drink__frame">
             {drinkItems.map((item) => (
@@ -88,7 +88,6 @@ const MenuList: React.FC = () => {
                 {item.name}
               </button>
             ))}
-            ;
           </section>
         </article>
       </section>

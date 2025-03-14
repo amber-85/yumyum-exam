@@ -1,5 +1,3 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
 import { Routes, Route } from "react-router-dom";
 import MenuPage from "./pages/menu/menupage";
 import CartPage from "./pages/cart/cartpage";
