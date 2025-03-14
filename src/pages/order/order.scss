@@ -1,0 +1,46 @@
+@use "../../style/mixins" as *;
+@use "../../style/variables" as *;
+
+
+
+.order__wrapper{
+    width: 100vw;
+    height: 100%;
+    background-color: $primary-color;
+}
+
+.logo{
+    margin-top: 2rem;
+    margin-left: 2rem;
+}
+.order{
+    &__icon{
+        width: 16rem;
+        height: 16rem;
+        @include margin-auto;
+        &__img{
+            max-width: 100%;
+        }
+    }
+    &__frame{
+        text-align: center;
+        &__title{
+            @include typography(1.5rem, 600, $font-gray);
+        }
+        &__eta{
+            @include typography(1rem, 600, $font-gray);
+        }
+        &__orderid{
+            @include typography(1rem, 600, $font-gray);
+        }
+        &__btn{
+            @include typography (1.4rem, 600,$font-gray);
+            background-color: $secondry-color;
+            padding:2rem 4rem;
+            text-align: center;
+            border-radius: 0 0 .2rem .2rem;
+            margin-top: 2rem;
+        }
+    }
+}
+

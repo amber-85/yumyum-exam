@@ -1,0 +1,44 @@
+@mixin margin-auto{
+    margin-left: auto;
+    margin-right:auto;
+}
+
+@mixin typography($font-size,$font-weight,$font-color){
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:$font-size;
+    font-weight: $font-weight;
+    color:$font-color
+}
+
+@mixin btn-style(
+    $padding-1,
+    $padding-2,
+    $font-weight,
+    $font-size,
+
+
+){
+    padding:$padding-1 $padding-2;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: $font-weight;
+    font-size:$font-size;
+
+
+}
+
+@mixin flex($flex-direction,$justify-content,$align-item){
+    display:flex;
+    flex-direction:$flex-direction ;
+    justify-content: $justify-content;
+    align-items:$align-item;
+}
+
+@mixin grid($columns: auto, $rows: auto, $gap: 0, $align: stretch, $justify: stretch) {
+    display: grid;
+    grid-template-columns: $columns;
+    grid-template-rows: $rows;
+    gap: $gap;
+    align-items: $align;
+    justify-items: $justify;
+}
+

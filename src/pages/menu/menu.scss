@@ -1,0 +1,117 @@
+@use "../../style/mixins" as *;
+@use "../../style/variables" as *;
+
+.menu__wrapper{
+    width: 100vw;
+    height: 100%;
+    background: url("../../imgs/background.png") no-repeat center center/cover;
+    background-color: $green-color;
+
+}
+
+
+.header{
+    @include flex(row,space-between,center);
+    width: 85%;
+    height: 100%;
+    padding-top: 2rem;
+    @include margin-auto;
+
+}
+
+
+.cart__group{
+    position:relative;
+
+    &__quantity{
+        position:absolute;
+        top:-2.4rem;
+        right:-0.8rem;
+        background-color: rgb(225, 75, 75);
+        width: 2rem;
+        height: 1.8rem;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1rem;
+        color: $font-gray;    
+    }
+}
+
+.menu{
+    color: $font-gray;
+    background-color: $primary-color;
+    width: 90%;
+    @include margin-auto;
+    &__title{
+        padding-top:1.5rem;
+        text-align: center;
+        font-family: $primary-font-family;
+    }
+}
+.menu__list{   
+    @include flex(column, center, center);
+    width: 90%;
+   &__item{
+    width: 90%;
+    @include margin-auto;
+    
+    cursor:pointer;
+    border-radius: .3rem;
+    padding:.2rem .5rem;
+    &:hover{
+        background-color: $fade-gray;
+    
+    }
+    &__title__price{
+        @include typography(1.2rem,600,$font-gray);
+        @include flex (row,space-between,center);
+
+    }
+    &__ingredients{
+        @include typography(.8rem, 400, $font-gray);
+    }
+    &__dip{
+        @include typography(1.2rem,600,$font-gray);
+        @include flex (row,space-between,center);
+    }
+    &__dip__frame{ 
+        width: 90%;
+        @include grid(repeat(3, 1fr),repeat(2,auto),0.2rem,center,center);
+        &__btn{
+            width: 100%;
+            @include btn-style(  
+            .3rem,
+            .1rem,
+            400,
+            10px,
+            )
+        }
+    }
+
+    &__drink{
+        @include typography(1.2rem,600,$font-gray);
+        @include flex (row,space-between,center);
+        &__frame{
+            @include grid(repeat(3, 1fr),repeat(2,auto),0.2rem,center,center);
+            &__btn{
+                width: 100%;
+                @include btn-style(  
+                .3rem,
+                .1rem,
+                400,
+                10px,
+                )
+            }
+        }
+     
+    }
+    }
+    
+   }
+   
+
+
+
